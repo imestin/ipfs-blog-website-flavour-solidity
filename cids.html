@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<title>IPFS Blog</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cids.html">CIDs</a>
+		<a href="#" onclick="openModal()" class="right">Help the Rebels</a>
+	</nav>
+	<main id="main">
+		<div class="lds-hourglass" id="loading"> Loading...</div>
+        
+        <div id="articleBox">
+
+            <h3>This is the site CID: </h3><div id="siteCID_text"></div>
+            <button id='copy_site_cid'>Copy Site CID</button>
+            <h3>This is QR Code for the site CID:</h3>
+            <center><div id="siteCID_qr"></div></center>
+    
+            <h3>This is the articles CID: </h3><div id="articlesCID_text"></div>
+            <button id='copy_articles_cid'>Copy Articles CID</button>
+            <h3>This is QR Code for the articles CID:</h3>
+            <center><div id="articlesCID_qr"></div></center>
+    
+            <h3>This is the previous DB CID: </h3><div id="dbCID_text"></div>
+            <button id='copy_db_cid'>Copy DB CID</button>
+            <h3>This is QR Code for the previous DB CID:</h3>
+            <center><div id="dbCID_qr"></div></center>
+        </div>
+
+		<div id="chooseHelpFileModal" class="modal">
+			<div class="modalContent">
+				<div id="modalRow1" class="modalRow modalRowTitle">Choose the sentence that describes you the most:</div>
+				<a href="article.html?cid=QmbinTR2UFHGBDmmAMUjSryaWnzGGBBuSsHbK9iye2UiXu" id="modalRow2" class="modalRow modalRowButton">"I like computers ... a little."</a>
+				<a href="article.html?cid=Qmd3rDcQhjRTZ7NWKueh9MXrmci18raPGBxrLTDRdw6Lg1"id="modalRow3" class="modalRow modalRowButton">"I like computers a LOT."</a>
+			</div>
+		</div>
+	</main>
+	<footer><h2>Footer</h2><p>Second Line.</p></footer>
+    
+    <script type="text/javascript" src="meta.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+    <script type="text/javascript" src="cids.js"></script>
+    <script>
+        displayCIDs();
+    </script>
+</body>
+</html>

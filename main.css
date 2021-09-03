@@ -1,0 +1,215 @@
+:root {
+    --background-color: #190019;
+    --card-color: #300030;
+    --card-hover-color: #304430;
+    --card-active-text: #ffff44;
+    --menu-color: white;
+    --menu-hover-background-color: #500050;
+    --menu-hover-color: #ffff00;
+    --modal-background: #222222;
+    --loading: #D9FAFA;
+    --footer-background: #dddddd;
+    --footer-color: #ffff80;
+    --nav-height: 47px;
+    --footer-height: 110px;
+}
+
+body {
+    background-image: url(background9.jpg);
+    background-size: 100%;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: var(--nav-height);
+    background-color: var(--background-color);
+}
+nav a {
+    float: left;
+    display: block;
+    color: var(--menu-color);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--menu-hover-background-color);
+    color: var(--menu-hover-color);
+}
+
+nav a.right {
+    float: right;
+}
+
+main {
+    padding: 20px;
+    width: 70vw;
+    margin: auto;
+    padding-top: var(--nav-height);
+    padding-bottom: var(--footer-height);
+}
+
+
+ul > li {
+    list-style-type: none;
+}
+.cardLink {
+    text-decoration: none;
+}
+.articleCard {
+    padding: 16px;
+    margin: 30px;
+    width: 27vw;
+    text-align: center;
+    color: var(--menu-color);
+    background-color: var(--card-color);
+}
+.articleCard:hover {
+    color: var(--card-active-text);
+    background-color: var(--card-hover-color);
+}
+
+#articleBox {
+    background-color: rgba(255,255,255,0.9);
+    padding: 60px;
+    margin: 50px;
+    margin: auto;
+}
+
+
+.coverImage {
+    min-width: 11vw;
+    max-width: 26vw;
+    min-height: 11vh;
+    max-height: 33vh;
+}
+
+img {
+    max-width: 90%;
+    max-height: 80vh;
+    margin: 20px;
+}
+
+pre {
+    background-color: black; 
+    color: white;
+    padding: 10px;
+}
+
+
+
+/* The Modal -------------------------------------------------------------------------------------------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);   /* Black with opacity */
+    padding-top: 60px;
+}
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--modal-background);
+}
+.modalRow {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    padding: 30px;
+    color: white;
+    width: 80%;
+    background-color: var(--modal-background);
+}
+.modalRowButton a {
+    color: inherit;
+}
+.modalRowButton {
+    text-decoration: none;
+    color: var(--footer-color);
+}
+.modalRowButton:hover {
+    color: var(--menu-hover-color);
+    background-color: var(--card-hover-color);
+}
+/* Modal end -------------------------------------------------------------------------------------------------------------------- */
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: var(--footer-height);
+    text-align: center;
+    color: var(--footer-color);
+    background-color: var(--background-color);
+}
+
+
+/* lds-hourglass  from loading.io/css/ */
+.lds-hourglass {
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 80px;
+    padding: 20vh 20vh 20vh 20vh;
+    margin: auto;
+    color: var(--menu-hover-color);
+    /*background-color: rgba(255,255,255,0.4)*/
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid var(--menu-hover-color);
+    border-color: var(--loading) transparent var(--loading) transparent;
+    animation: lds-hourglass 4.0s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  /* end of lds-hourglass*/
+
+
+
+/* Phone  ----------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+    main { padding: var(--nav-height) 0 0 0;  width: 100%; }
+    ul { margin-left: -40px; }
+    .articleCard { padding-top: 5px; padding-bottom: 5px; margin: 25px 0 25px 0; width: 96%; }
+    .coverImage { min-width: 80%; max-width: 90%; min-height: 20%; max-height: 100%; }
+    #articleBox { padding: 10px; margin: 10px; }
+    .modalRow { font-size: 24px; }
+    footer { display: none; }
+}
+/* Phone end -------------------------------------------------------------------------------------------------------------------- */

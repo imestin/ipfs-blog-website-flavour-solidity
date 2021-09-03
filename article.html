@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<title>IPFS Blog - Article</title>
+</head>
+<body>
+	<nav>
+        <a href="index.html">Home</a>
+        <a href="cids.html">CIDs</a>
+		<a href="#" onclick="openModal()" class="right">Help the Rebels</a>
+	</nav>
+	<main id="main">
+		
+        <div id="articleBox">
+			<div class="lds-hourglass" id="loading"> Loading...</div>
+		</div>
+
+		<div id="chooseHelpFileModal" class="modal">
+			<div class="modalContent">
+				<div id="modalRow1" class="modalRow modalRowTitle">Choose the sentence that describes you the most:</div>
+				<a href="article.html?cid=QmbinTR2UFHGBDmmAMUjSryaWnzGGBBuSsHbK9iye2UiXu" id="modalRow2" class="modalRow modalRowButton">"I like computers ... a little."</a>
+				<a href="article.html?cid=Qmd3rDcQhjRTZ7NWKueh9MXrmci18raPGBxrLTDRdw6Lg1"id="modalRow3" class="modalRow modalRowButton">"I like computers a LOT."</a>
+			</div>
+		</div>
+	</main>
+	<footer><h2>Footer</h2><p>Second Line</p></footer>
+	
+    <script type="text/javascript" src="meta.js"></script>
+    <script type="text/javascript" src="marked.min.js"></script>
+    <script type="text/javascript" src="article.js"></script>
+	<script>
+		loadDB();
+	</script>
+	<script type="text/javascript" src="modal.js"></script>
+</body>
+</html>
